@@ -1,0 +1,2 @@
+cd C:\Users\wangs\dev\openpose
+bin\OpenPoseDemo.exe --image_dir C:\Users\wangs\dev\pose2sim\data\zed\project1\zedLR --write_json C:\Users\wangs\dev\pose2sim\data\zed\project1\posejson --number_people_max 1

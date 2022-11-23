@@ -6,8 +6,8 @@
 
 [project]
 project_dir = '' # BETWEEN SINGLE QUOTES! # If empty, project dir is current dir
-frame_range = [] #For example [10,300], or [] if all frames.
-frame_rate = 15 #Hz
+frame_range = [0,400] #For example [10,300], or [] if all frames.
+frame_rate = 30 #Hz
 
 rawImg_folder_name = 'raw-2d'
 calib_folder_name = 'calib-2d'
@@ -23,20 +23,20 @@ pose_model = 'BODY_25B' #BODY_25B, BODY_25, COCO, MPI are available.
 # set your own model in skeleton.py if you don't use openpose.
 
 [calibration]
-type = 'checkerboard' # 'qca', 'checkerboard', 'arucoboard', or 'charucoboard'
+type = 'qca' # 'qca', 'checkerboard', 'arucoboard', or 'charucoboard'
    [calibration.qca]
    binning_factor = 1 # Usually 1
 
    [calibration.checkerboard]
-   corners_nb = [5,7] # [H,W] rather than [w,h]
-   square_size = [28.4,28.4] # mm # [h,w] if square is actually a rectangle
+   corners_nb = [7,12] # [H,W] rather than [w,h]
+   square_size = 80 # mm # [h,w] if square is actually a rectangle
    frame_for_origin = -1 # starting from zero. -1 if board is at origin on last frame.
    show_corner_detection = false # /!\ Beware that corners must be detected on all frames, 
    # or else extrinsic parameters may be wrong. Set show_corner_detection to 1 to verify.
    from_vid_or_img = 'img' # 'vid' or 'img'
    vid_snapshot_every_N_frames = 100
    vid_extension = 'mp4'
-   img_extension = 'png' # 'png', 'jpg', etc
+   img_extension = 'jpg' # 'png', 'jpg', etc
 
 [2d-tracking]
 tracked_keypoint = 'Neck' # Check skeleton.py and choose a stable point for tracking the person of interest.

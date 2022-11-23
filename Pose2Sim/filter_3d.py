@@ -33,7 +33,7 @@ from scipy import signal
 from scipy.ndimage import gaussian_filter1d
 from statsmodels.nonparametric.smoothers_lowess import lowess
 
-from Pose2Sim.common import plotWindow
+# from Pose2Sim.common import plotWindow
 
 ## AUTHORSHIP INFORMATION
 __author__ = "David Pagnon"
