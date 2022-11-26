@@ -9,3 +9,4 @@ pose-2d
 pose-2d-tracked
 pose-3d
 data/*
+*.DS_Store
